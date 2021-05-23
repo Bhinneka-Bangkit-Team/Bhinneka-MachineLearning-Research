@@ -10,8 +10,10 @@ mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 
 is_inference = True
+is_show_hands = True
 classlist = []
 filename = 'classlist.txt'
+model = None
 
 
 def save_data(landmark):
@@ -25,15 +27,20 @@ def save_data(landmark):
 
 def start():
     cur_class_idx = 0
-    cap = cv2.VideoCapture(0)
-    model = tf.keras.models.load_model('model.h5')
+    cap = cv2.VideoCapture('http://192.168.1.18:8080/video')
+    # cap = cv2.VideoCapture(0)
+    if is_inference:
+        model = tf.keras.models.load_model(
+            'D:\\Libraries\\Project\\Jupyter Notebook\\TextualEntailment\\best.h5')
     with mp_hands.Hands(
             min_detection_confidence=0.5,
             min_tracking_confidence=0.5) as hands:
         while cap.isOpened():
 
             success, image = cap.read()
-            # image = cv2.rotate(image, cv2.ROTATE_90_COUNTERCLOCKWISE)
+            image = cv2.rotate(image, cv2.ROTATE_90_COUNTERCLOCKWISE)
+            image = cv2.resize(image, (675, 1200))
+            image = image[100: 580, 0: 640]
             if not success:
                 print("Ignoring empty camera frame.")
                 # If loading a video, use 'break' instead of 'continue'.
@@ -73,13 +80,13 @@ def start():
 
                     key = cv2.waitKey(1)
 
-                    mp_drawing.draw_landmarks(
-                        image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+                    if is_show_hands:
+                        mp_drawing.draw_landmarks(
+                            image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
                     landmarks_data = []
                     for i, landmark in enumerate(hand_landmarks.landmark):
-                        print("Landmark {} {:30} {:30} TO {:30} {:30}".format(i, (landmark.x - x_center), (landmark.y - y_center),
-                                                                              (landmark.x - x_center)*width, (landmark.y - y_center)*height))
+                        # print("Landmark {} {:30} {:30} TO {:30} {:30}".format(i, (landmark.x - x_center), (landmark.y - y_center),(landmark.x - x_center)*width, (landmark.y - y_center)*height))
                         landmarks_data.append(landmark.x - x_center)
                         landmarks_data.append(landmark.y - y_center)
 
@@ -89,18 +96,23 @@ def start():
                         # Ini untuk ditampilkan ke window
                         non_norm_landmark = (int(landmark.x*width),
                                              int(landmark.y*height))
-                        image = cv2.putText(image, '{}, {}'.format(norm_landmark[0], norm_landmark[1]),
-                                            (non_norm_landmark),
-                                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
 
+                        if is_show_hands:
+                            image = cv2.putText(image, '{}, {}'.format(norm_landmark[0], norm_landmark[1]),
+                                                (non_norm_landmark),
+                                                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
                     label = 'UNKNOWN'
-                    prediction = model.predict_classes(np.array([np.array(landmarks_data)]).astype(np.float32))
-                    prediction = np.argmax(tf.keras.utils.to_categorical(prediction), axis = 1)[0]
-                    label = decode_label(prediction)
+
+                    if is_inference:
+                        prediction = model.predict_classes(
+                            np.array([np.array(landmarks_data)]).astype(np.float32))
+                        prediction = np.argmax(
+                            tf.keras.utils.to_categorical(prediction), axis=1)[0]
+                        label = decode_label(prediction)
                     image = cv2.putText(image, '{}'.format(str(label).upper()),
                                         (int(x_center*width),
                                          int(y_center*height)),
-                                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1, cv2.LINE_AA)
+                                        cv2.FONT_HERSHEY_SIMPLEX, 5, (0, 0, 255), 3, cv2.LINE_AA)
                     # For navigating between classes
                     if key == ord('m'):
                         print("next")
@@ -111,7 +123,7 @@ def start():
                         if cur_class_idx > 0:
                             cur_class_idx -= 1
                     # For saving data as dataset
-                    if key == ord('c'):
+                    if key == ord('c') and not is_inference:
                         landmarks_data.append(classlist[cur_class_idx])
                         save_data(landmarks_data)
                         print("CAPTURING CLASS:", classlist[cur_class_idx])
@@ -128,10 +140,14 @@ def load_ml_model():
     model.summary()
 
 # Single input only
+
+
 def inference(input):
     try:
-        prediction = model.predict_classes(np.array([input]).astype(np.float32))
-        prediction = np.argmax(tf.keras.utils.to_categorical(prediction), axis = 1)[0]
+        prediction = model.predict_classes(
+            np.array([input]).astype(np.float32))
+        prediction = np.argmax(
+            tf.keras.utils.to_categorical(prediction), axis=1)[0]
         return prediction
     except Exception as e:
         print("Error exception", e)
@@ -151,6 +167,7 @@ def read_classes():
 
 def decode_label(data):
     return classlist[data]
+
 
 read_classes()
 start()
