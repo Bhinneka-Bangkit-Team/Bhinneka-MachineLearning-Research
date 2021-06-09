@@ -85,6 +85,10 @@ In order to replicate our development steps, you need to do these things.
   pip intall requirements.txt
   ```
 And you're good to go !
+To run a python file, you can use this command
+  ```sh
+  python <filename>.py
+  ```
 You can view our researched methodologies in the scripts/final-notebook.ipynb
 you can use Jupyter Lab to view the file
 * Launch jupyter lab using
