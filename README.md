@@ -1,4 +1,5 @@
-![GitHub contributors](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research?color=%2342eff5&style=flat-square) ![GitHub forks](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research?color=%2342eff5&style=flat-square) ![GitHub issues](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub all releases](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research?color=%2342eff5&style=flat-square) ![GitHub pull requests](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research?color=%2342eff5&style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub forks](https://img.shields.io/github/forks/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub issues](https://img.shields.io/github/issues/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub all releases](https://img.shields.io/github/downloads/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub pull requests](https://img.shields.io/github/issues-pr/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research)
+
 
 <!-- PROJECT LOGO -->
 <br />
