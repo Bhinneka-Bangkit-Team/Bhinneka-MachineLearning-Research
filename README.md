@@ -53,10 +53,9 @@ Homepage           |  Speech-Text Feature          |  Text-Speech Feature       
 :-------------------------:|:-------------------------: |:-------------------------:|:-------------------------:
 ![](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research/blob/main/capss4.jpg) | ![](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research/blob/main/capss3.jpg) | ![](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research/blob/main/capss2.jpg) | ![](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research/blob/main/capss1.jpg)
 
-Hello, we want to introduce you to the KOMUNITAS (Komunikasi Tanpa Batas) project, with an app named "SELARAS". It's an app to help the HoH communicate better with the help of technology. Using chat-based user interface, it is able to convert sign language (SIBI) to text, and then converted into speech with Google Cloud Speech in live !. It also has a feature to listen for conversation using Google Cloud Speech to Text.
+Hello, we want to introduce you to the KOMUNITAS (Komunikasi Tanpa Batas) project, with an app named "SELARAS". Selaras is a sign language interpreter mobile app, specially tailored to serve the needs of the deaf and HoH community in Indonesia with the help of technology. Using chat-based user interface, it is able to convert sign language (SIBI) to text, and then converted into speech with Google Cloud Speech in live !. It also has a feature to listen for conversation using Google Cloud Speech to Text.
 
 ### Built With
-
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Native Android (Kotlin MVVM)](https://developer.android.com)
 * [TensorFlow and TensorFlow Lite](https://tensorflow.org)
