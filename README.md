@@ -75,7 +75,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+In order to replicate our development steps, you need to do these things.
 * Create virtual environment
   ```sh
   python3 -m venv venv
