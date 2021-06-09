@@ -71,6 +71,7 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 In order to replicate our development steps, you need to do these things.
+* Install python, download [here](https://python.org/download) 
 * Create virtual environment
   ```sh
   python3 -m venv venv
