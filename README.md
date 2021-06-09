@@ -67,3 +67,31 @@ This section should list any major frameworks that you built your project using.
 * [TensorFlow and TensorFlow Lite](https://tensorflow.org)
 * [Nestjs (Node.js framework)](https://nestjs.com)
 * [Google Cloud Platform](https://cloud.google.com)
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* Create virtual environment
+  ```sh
+  python3 -m venv venv
+  ```
+* Activate virtual environment
+  ```sh
+  ./venv/scripts/activate
+  ```
+* Install package
+  ```sh
+  pip intall requirements.txt
+  ```
+And you're good to go !
+You can view our researched methodologies in the scripts/final-notebook.ipynb
+you can use Jupyter Lab to view the file
+* Launch jupyter lab using
+  ```sh
+  jupyter lab
+  ```
