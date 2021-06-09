@@ -60,6 +60,7 @@ Hello, we want to introduce you to the KOMUNITAS (Komunikasi Tanpa Batas) projec
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Native Android (Kotlin MVVM)](https://developer.android.com)
 * [TensorFlow and TensorFlow Lite](https://tensorflow.org)
+* [Google Mediapipe Framework](https://google.github.io/mediapipe/)
 * [Nestjs (Node.js framework)](https://nestjs.com)
 * [Google Cloud Platform](https://cloud.google.com)
 <!-- GETTING STARTED -->
