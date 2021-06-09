@@ -1,9 +1,4 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+![GitHub contributors](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub forks](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub issues](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub all releases](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub pull requests](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research)
 
 
 
