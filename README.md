@@ -85,7 +85,8 @@ In order to replicate our development steps, you need to do these things.
   pip intall requirements.txt
   ```
 And you're good to go !
-To run a python file, you can use this command
+To run a python script, you can use this command
+* Run python script
   ```sh
   python <filename>.py
   ```
