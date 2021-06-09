@@ -1,6 +1,4 @@
-![GitHub contributors](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub forks](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub issues](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub all releases](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub pull requests](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research)
-
-
+![GitHub contributors](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research?color=%2342eff5&style=flat-square) ![GitHub forks](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research?color=%2342eff5&style=flat-square) ![GitHub issues](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research) ![GitHub all releases](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research?color=%2342eff5&style=flat-square) ![GitHub pull requests](https://github.com/Bhinneka-Bangkit-Team/Bhinneka-MachineLearning-Research?color=%2342eff5&style=flat-square)
 
 <!-- PROJECT LOGO -->
 <br />
